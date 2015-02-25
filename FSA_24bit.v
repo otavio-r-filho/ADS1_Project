@@ -18,14 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module FSA_24bit(Multiplicand, Multiplier, Result);
+module FSA_24bit(Multiplicand, Multiplier, Result, Co);
 	
 	//input clk, rst;
 	input wire [23:0] Multiplicand;
 	input wire [23:0] Multiplier;
 	
-	output reg [47:0] Result;
-	output reg Co;
+	output wire [47:0] Result;
+	output wire Co;
 	
 	wire [47:0] W0,	 W1,  W2,  W3,  W4,  W5,  W6,  W7,  W8,  W9,  W10, W11;
 	wire [47:0] W12, W13, W14, W15, W16, W17, W18, W19, W20, W21, W22, W23;
@@ -639,47 +639,47 @@ module FSA_24bit(Multiplicand, Multiplier, Result);
 	
 //////////////////////////////////////////////////////////////////////////
 
-	KSA_48bit KSA0(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA1(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA2(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA3(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA4(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA5(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA6(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA7(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA8(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA9(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA10(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA11(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA12(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA13(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA14(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA15(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA16(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA17(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA18(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA19(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA20(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA21(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA22(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA23(.Ci(), .A(), .B(), .S(), .Co());
-	KSA_48bit KSA24(.Ci(), .A(), .B(), .S(), .Co());
+	KSA_48bit KSA0(.Ci(1'b0), .A({24'b0,WAND0}), .B({23'b0,WAND1,1'b0}), .S(W0), .Co());
+	KSA_48bit KSA1(.Ci(1'b0), .A({22'b0,WAND2,2'b0}), .B({21'b0,WAND3,3'b0}), .S(W1), .Co());
+	KSA_48bit KSA2(.Ci(1'b0), .A({20'b0,WAND4,4'b0}), .B({19'b0,WAND5,5'b0}), .S(W2), .Co());
+	KSA_48bit KSA3(.Ci(1'b0), .A({18'b0,WAND6,6'b0}), .B({17'b0,WAND7,7'b0}), .S(W3), .Co());
+	KSA_48bit KSA4(.Ci(1'b0), .A({16'b0,WAND8,8'b0}), .B({15'b0,WAND9,9'b0}), .S(W4), .Co());
+	KSA_48bit KSA5(.Ci(1'b0), .A({14'b0,WAND10,10'b0}), .B({13'b0,WAND11,11'b0}), .S(W5), .Co());
+	KSA_48bit KSA6(.Ci(1'b0), .A({12'b0,WAND12,12'b0}), .B({11'b0,WAND13,13'b0}), .S(W6), .Co());
+	KSA_48bit KSA7(.Ci(1'b0), .A({10'b0,WAND14,14'b0}), .B({9'b0,WAND15,15'b0}), .S(W7), .Co());
+	KSA_48bit KSA8(.Ci(1'b0), .A({8'b0,WAND16,16'b0}), .B({7'b0,WAND17,17'b0}), .S(W8), .Co());
+	KSA_48bit KSA9(.Ci(1'b0), .A({6'b0,WAND18,18'b0}), .B({5'b0,WAND19,19'b0}), .S(W9), .Co());
+	KSA_48bit KSA10(.Ci(1'b0), .A({4'b0,WAND20,20'b0}), .B({3'b0,WAND21,21'b0}), .S(W10), .Co());
+	KSA_48bit KSA11(.Ci(1'b0), .A({2'b0,WAND22,22'b0}), .B({1'b0,WAND23,23'b0}), .S(W11), .Co());
+	KSA_48bit KSA12(.Ci(1'b0), .A({1'b0, ~Multiplier[22], 22'b0, Multiplier[23], 23'b0}), .B({1'b1, ~Multiplicand[23], 22'b0, Multiplicand[23], 23'b0}), .S(W12), .Co());
+	KSA_48bit KSA13(.Ci(1'b0), .A(W0), .B(W1), .S(W13), .Co());
+	KSA_48bit KSA14(.Ci(1'b0), .A(W2), .B(W3), .S(W14), .Co());
+	KSA_48bit KSA15(.Ci(1'b0), .A(W4), .B(W5), .S(W15), .Co());
+	KSA_48bit KSA16(.Ci(1'b0), .A(W6), .B(W7), .S(W16), .Co());
+	KSA_48bit KSA17(.Ci(1'b0), .A(W8), .B(W9), .S(W17), .Co());
+	KSA_48bit KSA18(.Ci(1'b0), .A(W10), .B(W11), .S(W18), .Co());
+	KSA_48bit KSA19(.Ci(1'b0), .A(W13), .B(W14), .S(W19), .Co());
+	KSA_48bit KSA20(.Ci(1'b0), .A(W15), .B(W16), .S(W20), .Co());
+	KSA_48bit KSA21(.Ci(1'b0), .A(W17), .B(W18), .S(W21), .Co());
+	KSA_48bit KSA22(.Ci(1'b0), .A(W12), .B(W19), .S(W22), .Co());
+	KSA_48bit KSA23(.Ci(1'b0), .A(W20), .B(W21), .S(W23), .Co());
+	KSA_48bit KSA24(.Ci(1'b0), .A(W22), .B(W23), .S(Result), .Co(Co));
 
 //////////////////////////////////////////////////////////////////////////
 
-  KSA_24bit KSA0(.Ci(1'b0), .A({12'b0, WAND0}), .B({11'b0, WAND1, 1'b0}), .S(W0), .Co());
-  KSA_24bit KSA1(.Ci(1'b0), .A({10'b0, WAND2, 2'b0}), .B({9'b0, WAND3, 3'b0}), .S(W1), .Co());
-  KSA_24bit KSA2(.Ci(1'b0), .A({8'b0, WAND4, 4'b0}), .B({7'b0, WAND5, 5'b0}), .S(W2), .Co());
-  KSA_24bit KSA3(.Ci(1'b0), .A({6'b0, WAND6, 6'b0}), .B({5'b0, WAND7, 7'b0}), .S(W3), .Co());
-  KSA_24bit KSA4(.Ci(1'b0), .A({4'b0, WAND8, 8'b0}), .B({3'b0, WAND9, 9'b0}), .S(W4), .Co());
-  KSA_24bit KSA5(.Ci(1'b0), .A({2'b0, WAND10, 10'b0}), .B({1'b0, WAND11, 11'b0}), .S(W5), .Co());
-  KSA_24bit KSA6(.Ci(1'b0), .A({1'b0, ~Multiplier[11], 10'b0, Multiplier[11], 11'b0}), .B({1'b1, ~Multiplicand[11], 10'b0, Multiplicand[11], 11'b0}), .S(W6), .Co());
-  KSA_24bit KSA7(.Ci(1'b0), .A(W0), .B(W1), .S(W7), .Co());
-  KSA_24bit KSA8(.Ci(1'b0), .A(W2), .B(W3), .S(W8), .Co());
-  KSA_24bit KSA9(.Ci(1'b0), .A(W4), .B(W5), .S(W9), .Co());
-  KSA_24bit KSA10(.Ci(1'b0), .A(W7), .B(W8), .S(W10), .Co());
-  KSA_24bit KSA11(.Ci(1'b0), .A(W6), .B(W9), .S(W11), .Co());
-  KSA_24bit KSA12(.Ci(1'b0), .A(W10), .B(W11), .S(W12), .Co());
+  // KSA_24bit KSA0(.Ci(1'b0), .A({12'b0, WAND0}), .B({11'b0, WAND1, 1'b0}), .S(W0), .Co());
+  // KSA_24bit KSA1(.Ci(1'b0), .A({10'b0, WAND2, 2'b0}), .B({9'b0, WAND3, 3'b0}), .S(W1), .Co());
+  // KSA_24bit KSA2(.Ci(1'b0), .A({8'b0, WAND4, 4'b0}), .B({7'b0, WAND5, 5'b0}), .S(W2), .Co());
+  // KSA_24bit KSA3(.Ci(1'b0), .A({6'b0, WAND6, 6'b0}), .B({5'b0, WAND7, 7'b0}), .S(W3), .Co());
+  // KSA_24bit KSA4(.Ci(1'b0), .A({4'b0, WAND8, 8'b0}), .B({3'b0, WAND9, 9'b0}), .S(W4), .Co());
+  // KSA_24bit KSA5(.Ci(1'b0), .A({2'b0, WAND10, 10'b0}), .B({1'b0, WAND11, 11'b0}), .S(W5), .Co());
+  // KSA_24bit KSA6(.Ci(1'b0), .A({1'b0, ~Multiplier[11], 10'b0, Multiplier[11], 11'b0}), .B({1'b1, ~Multiplicand[11], 10'b0, Multiplicand[11], 11'b0}), .S(W6), .Co());
+  // KSA_24bit KSA7(.Ci(1'b0), .A(W0), .B(W1), .S(W7), .Co());
+  // KSA_24bit KSA8(.Ci(1'b0), .A(W2), .B(W3), .S(W8), .Co());
+  // KSA_24bit KSA9(.Ci(1'b0), .A(W4), .B(W5), .S(W9), .Co());
+  // KSA_24bit KSA10(.Ci(1'b0), .A(W7), .B(W8), .S(W10), .Co());
+  // KSA_24bit KSA11(.Ci(1'b0), .A(W6), .B(W9), .S(W11), .Co());
+  // KSA_24bit KSA12(.Ci(1'b0), .A(W10), .B(W11), .S(W12), .Co());
   
 //////////////////////////////////////////////////////////////////////////
 
@@ -690,6 +690,6 @@ module FSA_24bit(Multiplicand, Multiplier, Result);
 			// Result[23:0] <= W12[23:0];
 		// end
 	// end
-	assign Result[23:0] = W12[23:0];
+	//assign Result[47:0] = W24[47:0];
 endmodule
 

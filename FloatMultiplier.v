@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 module FloatMultiplier(Multiplicand, Multiplier, Result);
 	
 	
@@ -17,7 +17,7 @@ module FloatMultiplier(Multiplicand, Multiplier, Result);
 	
 
     // mantisa multiplication:
-	FSA_24bit Mult( .Multiplicand({1'b1,Multiplicand[22:0]}), .Multiplier({1'b1,Multiplier[22:0]}), .Result(Wmult));
+	FSA_24bit Mult( .Multiplicand({1'b1,Multiplicand[22:0]}), .Multiplier({1'b1,Multiplier[22:0]}), .Result(Wmult), .Co());
 	Mux m2to1( .sel(Wmult[47]), .in0(Wmult[46:23]), .in1(Wmult[45:22]), .out(Wmux));
 	or o1(Result[0],Wmux[1],Wmux[0]);
 	assign Result[22:1]= Wmux[23:2];
