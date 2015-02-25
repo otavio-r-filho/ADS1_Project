@@ -18,9 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module FSA(clk, rst, Multiplicand, Multiplier, Result);
+module FSA_24bit(Multiplicand, Multiplier, Result);
 	
-	input clk, rst;
+	//input clk, rst;
 	input wire [23:0] Multiplicand;
 	input wire [23:0] Multiplier;
 	
@@ -683,13 +683,13 @@ module FSA(clk, rst, Multiplicand, Multiplier, Result);
   
 //////////////////////////////////////////////////////////////////////////
 
-	always @(posedge clk) begin
-		if(rst == 1'b1) begin			
-			Result[23:0] <= 1'b0;
-		end else begin
-			Result[23:0] <= W12[23:0];
-		end
-	end
-	
+	// always @(posedge clk) begin
+		// if(rst == 1'b1) begin			
+			// Result[23:0] <= 1'b0;
+		// end else begin
+			// Result[23:0] <= W12[23:0];
+		// end
+	// end
+	assign Result[23:0] = W12[23:0];
 endmodule
 
