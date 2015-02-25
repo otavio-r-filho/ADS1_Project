@@ -41,7 +41,7 @@ module FSA_tb;
 		.rst(rst),		 
 		.Multiplicand(Multiplicand), 
 		.Multiplier(Multiplier), 
-		.Result(Result),
+		.Result(Result)
 		.Co()
 	);
 
