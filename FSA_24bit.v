@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module FSA(clk, rst, Multiplicand, Multiplier, Result);
+module FSA_24bit(Multiplicand, Multiplier, Result);
 	
 	input wire clk, rst;
 	input wire [23:0] Multiplicand;
