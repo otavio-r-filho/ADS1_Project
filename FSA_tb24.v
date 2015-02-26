@@ -36,13 +36,12 @@ module FSA_tb;
 	integer input_file, read_status;
 
 	// Instantiate the Unit Under Test (UUT)
-	FSA_24bit uut ( 
-	    .clk(clk),
-		.rst(rst),		 
+	FSA_24bit_u uut ( 
+	   	 
 		.Multiplicand(Multiplicand), 
 		.Multiplier(Multiplier), 
-		.Result(Result),
-		.Co()
+		.Result(Result)
+		
 	);
 
 	initial begin

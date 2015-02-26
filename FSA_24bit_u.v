@@ -57,7 +57,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND0[20], Multiplicand[20], Multiplier[0]);
 	and(WAND0[21], Multiplicand[21], Multiplier[0]);
 	and(WAND0[22], Multiplicand[22], Multiplier[0]);
-	and(WAND0[23], Multiplicand[23], ~Multiplier[0]);
+	and(WAND0[23], Multiplicand[23], Multiplier[0]);
 	
 	and(WAND1[0], Multiplicand[0], Multiplier[1]);
 	and(WAND1[1], Multiplicand[1], Multiplier[1]);
@@ -82,7 +82,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND1[20], Multiplicand[20], Multiplier[1]);
 	and(WAND1[21], Multiplicand[21], Multiplier[1]);
 	and(WAND1[22], Multiplicand[22], Multiplier[1]);
-	and(WAND1[23], Multiplicand[23], ~Multiplier[1]);
+	and(WAND1[23], Multiplicand[23], Multiplier[1]);
 	
 	and(WAND2[0], Multiplicand[0], Multiplier[2]);
 	and(WAND2[1], Multiplicand[1], Multiplier[2]);
@@ -107,7 +107,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND2[20], Multiplicand[20], Multiplier[2]);
 	and(WAND2[21], Multiplicand[21], Multiplier[2]);
 	and(WAND2[22], Multiplicand[22], Multiplier[2]);
-	and(WAND2[23], Multiplicand[23], ~Multiplier[2]);
+	and(WAND2[23], Multiplicand[23], Multiplier[2]);
 	
 	and(WAND3[0], Multiplicand[0], Multiplier[3]);
 	and(WAND3[1], Multiplicand[1], Multiplier[3]);
@@ -132,7 +132,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND3[20], Multiplicand[20], Multiplier[3]);
 	and(WAND3[21], Multiplicand[21], Multiplier[3]);
 	and(WAND3[22], Multiplicand[22], Multiplier[3]);
-	and(WAND3[23], Multiplicand[23], ~Multiplier[3]);
+	and(WAND3[23], Multiplicand[23], Multiplier[3]);
 	
 	and(WAND4[0], Multiplicand[0], Multiplier[4]);
 	and(WAND4[1], Multiplicand[1], Multiplier[4]);
@@ -157,7 +157,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND4[20], Multiplicand[20], Multiplier[4]);
 	and(WAND4[21], Multiplicand[21], Multiplier[4]);
 	and(WAND4[22], Multiplicand[22], Multiplier[4]);
-	and(WAND4[23], Multiplicand[23], ~Multiplier[4]);
+	and(WAND4[23], Multiplicand[23], Multiplier[4]);
 	
 	and(WAND5[0], Multiplicand[0], Multiplier[5]);
 	and(WAND5[1], Multiplicand[1], Multiplier[5]);
@@ -182,7 +182,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND5[20], Multiplicand[20], Multiplier[5]);
 	and(WAND5[21], Multiplicand[21], Multiplier[5]);
 	and(WAND5[22], Multiplicand[22], Multiplier[5]);
-	and(WAND5[23], Multiplicand[23], ~Multiplier[5]);
+	and(WAND5[23], Multiplicand[23], Multiplier[5]);
 	
 	and(WAND6[0], Multiplicand[0], Multiplier[6]);
 	and(WAND6[1], Multiplicand[1], Multiplier[6]);
@@ -207,7 +207,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND6[20], Multiplicand[20], Multiplier[6]);
 	and(WAND6[21], Multiplicand[21], Multiplier[6]);
 	and(WAND6[22], Multiplicand[22], Multiplier[6]);
-	and(WAND6[23], Multiplicand[23], ~Multiplier[6]);
+	and(WAND6[23], Multiplicand[23], Multiplier[6]);
 	
 	and(WAND7[0], Multiplicand[0], Multiplier[7]);
 	and(WAND7[1], Multiplicand[1], Multiplier[7]);
@@ -232,7 +232,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND7[20], Multiplicand[20], Multiplier[7]);
 	and(WAND7[21], Multiplicand[21], Multiplier[7]);
 	and(WAND7[22], Multiplicand[22], Multiplier[7]);
-	and(WAND7[23], Multiplicand[23], ~Multiplier[7]);
+	and(WAND7[23], Multiplicand[23], Multiplier[7]);
 	
 	and(WAND8[0], Multiplicand[0], Multiplier[8]);
 	and(WAND8[1], Multiplicand[1], Multiplier[8]);
@@ -257,7 +257,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND8[20], Multiplicand[20], Multiplier[8]);
 	and(WAND8[21], Multiplicand[21], Multiplier[8]);
 	and(WAND8[22], Multiplicand[22], Multiplier[8]);
-	and(WAND8[23], Multiplicand[23], ~Multiplier[8]);
+	and(WAND8[23], Multiplicand[23], Multiplier[8]);
 	
 	and(WAND9[0], Multiplicand[0], Multiplier[9]);
 	and(WAND9[1], Multiplicand[1], Multiplier[9]);
@@ -282,7 +282,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND9[20], Multiplicand[20], Multiplier[9]);
 	and(WAND9[21], Multiplicand[21], Multiplier[9]);
 	and(WAND9[22], Multiplicand[22], Multiplier[9]);
-	and(WAND9[23], Multiplicand[23], ~Multiplier[9]);
+	and(WAND9[23], Multiplicand[23], Multiplier[9]);
 	
 	and(WAND10[0], Multiplicand[0], Multiplier[10]);
 	and(WAND10[1], Multiplicand[1], Multiplier[10]);
@@ -307,7 +307,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND10[20], Multiplicand[20], Multiplier[10]);
 	and(WAND10[21], Multiplicand[21], Multiplier[10]);
 	and(WAND10[22], Multiplicand[22], Multiplier[10]);
-	and(WAND10[23], Multiplicand[23], ~Multiplier[10]);
+	and(WAND10[23], Multiplicand[23], Multiplier[10]);
 	
 	and(WAND11[0], Multiplicand[0], Multiplier[11]);
 	and(WAND11[1], Multiplicand[1], Multiplier[11]);
@@ -332,7 +332,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND11[20], Multiplicand[20], Multiplier[11]);
 	and(WAND11[21], Multiplicand[21], Multiplier[11]);
 	and(WAND11[22], Multiplicand[22], Multiplier[11]);
-	and(WAND11[23], Multiplicand[23], ~Multiplier[11]);
+	and(WAND11[23], Multiplicand[23], Multiplier[11]);
 	
 	and(WAND12[0], Multiplicand[0], Multiplier[12]);
 	and(WAND12[1], Multiplicand[1], Multiplier[12]);
@@ -357,7 +357,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND12[20], Multiplicand[20], Multiplier[12]);
 	and(WAND12[21], Multiplicand[21], Multiplier[12]);
 	and(WAND12[22], Multiplicand[22], Multiplier[12]);
-	and(WAND12[23], Multiplicand[23], ~Multiplier[12]);
+	and(WAND12[23], Multiplicand[23], Multiplier[12]);
 	
 	and(WAND13[0], Multiplicand[0], Multiplier[13]);
 	and(WAND13[1], Multiplicand[1], Multiplier[13]);
@@ -382,7 +382,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND13[20], Multiplicand[20], Multiplier[13]);
 	and(WAND13[21], Multiplicand[21], Multiplier[13]);
 	and(WAND13[22], Multiplicand[22], Multiplier[13]);
-	and(WAND13[23], Multiplicand[23], ~Multiplier[13]);
+	and(WAND13[23], Multiplicand[23], Multiplier[13]);
 	
 	and(WAND14[0], Multiplicand[0], Multiplier[14]);
 	and(WAND14[1], Multiplicand[1], Multiplier[14]);
@@ -407,7 +407,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND14[20], Multiplicand[20], Multiplier[14]);
 	and(WAND14[21], Multiplicand[21], Multiplier[14]);
 	and(WAND14[22], Multiplicand[22], Multiplier[14]);
-	and(WAND14[23], Multiplicand[23], ~Multiplier[14]);
+	and(WAND14[23], Multiplicand[23], Multiplier[14]);
 	
 	and(WAND15[0], Multiplicand[0], Multiplier[15]);
 	and(WAND15[1], Multiplicand[1], Multiplier[15]);
@@ -432,7 +432,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND15[20], Multiplicand[20], Multiplier[15]);
 	and(WAND15[21], Multiplicand[21], Multiplier[15]);
 	and(WAND15[22], Multiplicand[22], Multiplier[15]);
-	and(WAND15[23], Multiplicand[23], ~Multiplier[15]);
+	and(WAND15[23], Multiplicand[23], Multiplier[15]);
 	
 	and(WAND16[0], Multiplicand[0], Multiplier[16]);
 	and(WAND16[1], Multiplicand[1], Multiplier[16]);
@@ -457,7 +457,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND16[20], Multiplicand[20], Multiplier[16]);
 	and(WAND16[21], Multiplicand[21], Multiplier[16]);
 	and(WAND16[22], Multiplicand[22], Multiplier[16]);
-	and(WAND16[23], Multiplicand[23], ~Multiplier[16]);
+	and(WAND16[23], Multiplicand[23], Multiplier[16]);
 	
 	and(WAND17[0], Multiplicand[0], Multiplier[17]);
 	and(WAND17[1], Multiplicand[1], Multiplier[17]);
@@ -482,7 +482,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND17[20], Multiplicand[20], Multiplier[17]);
 	and(WAND17[21], Multiplicand[21], Multiplier[17]);
 	and(WAND17[22], Multiplicand[22], Multiplier[17]);
-	and(WAND17[23], Multiplicand[23], ~Multiplier[17]);
+	and(WAND17[23], Multiplicand[23], Multiplier[17]);
 	
 	and(WAND18[0], Multiplicand[0], Multiplier[18]);
 	and(WAND18[1], Multiplicand[1], Multiplier[18]);
@@ -507,7 +507,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND18[20], Multiplicand[20], Multiplier[18]);
 	and(WAND18[21], Multiplicand[21], Multiplier[18]);
 	and(WAND18[22], Multiplicand[22], Multiplier[18]);
-	and(WAND18[23], Multiplicand[23], ~Multiplier[18]);
+	and(WAND18[23], Multiplicand[23], Multiplier[18]);
 	
 	and(WAND19[0], Multiplicand[0], Multiplier[19]);
 	and(WAND19[1], Multiplicand[1], Multiplier[19]);
@@ -532,7 +532,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND19[20], Multiplicand[20], Multiplier[19]);
 	and(WAND19[21], Multiplicand[21], Multiplier[19]);
 	and(WAND19[22], Multiplicand[22], Multiplier[19]);
-	and(WAND19[23], Multiplicand[23], ~Multiplier[19]);
+	and(WAND19[23], Multiplicand[23], Multiplier[19]);
 	
 	and(WAND20[0], Multiplicand[0], Multiplier[20]);
 	and(WAND20[1], Multiplicand[1], Multiplier[20]);
@@ -557,7 +557,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND20[20], Multiplicand[20], Multiplier[20]);
 	and(WAND20[21], Multiplicand[21], Multiplier[20]);
 	and(WAND20[22], Multiplicand[22], Multiplier[20]);
-	and(WAND20[23], Multiplicand[23], ~Multiplier[20]);
+	and(WAND20[23], Multiplicand[23], Multiplier[20]);
 	
 	and(WAND21[0], Multiplicand[0], Multiplier[21]);
 	and(WAND21[1], Multiplicand[1], Multiplier[21]);
@@ -582,7 +582,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND21[20], Multiplicand[20], Multiplier[21]);
 	and(WAND21[21], Multiplicand[21], Multiplier[21]);
 	and(WAND21[22], Multiplicand[22], Multiplier[21]);
-	and(WAND21[23], Multiplicand[23], ~Multiplier[21]);
+	and(WAND21[23], Multiplicand[23], Multiplier[21]);
 	
 	and(WAND22[0], Multiplicand[0], Multiplier[22]);
 	and(WAND22[1], Multiplicand[1], Multiplier[22]);
@@ -607,31 +607,31 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	and(WAND22[20], Multiplicand[20], Multiplier[22]);
 	and(WAND22[21], Multiplicand[21], Multiplier[22]);
 	and(WAND22[22], Multiplicand[22], Multiplier[22]);
-	and(WAND22[23], Multiplicand[23], ~Multiplier[22]);
+	and(WAND22[23], Multiplicand[23], Multiplier[22]);
 	
-	and(WAND23[0], ~Multiplicand[0], Multiplier[23]);
-	and(WAND23[1], ~Multiplicand[1], Multiplier[23]);
-	and(WAND23[2], ~Multiplicand[2], Multiplier[23]);
-	and(WAND23[3], ~Multiplicand[3], Multiplier[23]);
-	and(WAND23[4], ~Multiplicand[4], Multiplier[23]);
-	and(WAND23[5], ~Multiplicand[5], Multiplier[23]);
-	and(WAND23[6], ~Multiplicand[6], Multiplier[23]);
-	and(WAND23[7], ~Multiplicand[7], Multiplier[23]);
-	and(WAND23[8], ~Multiplicand[8], Multiplier[23]);
-	and(WAND23[9], ~Multiplicand[9], Multiplier[23]);
-	and(WAND23[10], ~Multiplicand[10], Multiplier[23]);
-	and(WAND23[11], ~Multiplicand[11], Multiplier[23]);
-	and(WAND23[12], ~Multiplicand[12], Multiplier[23]);
-	and(WAND23[13], ~Multiplicand[13], Multiplier[23]);
-	and(WAND23[14], ~Multiplicand[14], Multiplier[23]);
-	and(WAND23[15], ~Multiplicand[15], Multiplier[23]);
-	and(WAND23[16], ~Multiplicand[16], Multiplier[23]);
-	and(WAND23[17], ~Multiplicand[17], Multiplier[23]);
-	and(WAND23[18], ~Multiplicand[18], Multiplier[23]);
-	and(WAND23[19], ~Multiplicand[19], Multiplier[23]);
-	and(WAND23[20], ~Multiplicand[20], Multiplier[23]);
-	and(WAND23[21], ~Multiplicand[21], Multiplier[23]);
-	and(WAND23[22], ~Multiplicand[22], Multiplier[23]);
+	and(WAND23[0], Multiplicand[0], Multiplier[23]);
+	and(WAND23[1], Multiplicand[1], Multiplier[23]);
+	and(WAND23[2], Multiplicand[2], Multiplier[23]);
+	and(WAND23[3], Multiplicand[3], Multiplier[23]);
+	and(WAND23[4], Multiplicand[4], Multiplier[23]);
+	and(WAND23[5], Multiplicand[5], Multiplier[23]);
+	and(WAND23[6], Multiplicand[6], Multiplier[23]);
+	and(WAND23[7], Multiplicand[7], Multiplier[23]);
+	and(WAND23[8], Multiplicand[8], Multiplier[23]);
+	and(WAND23[9], Multiplicand[9], Multiplier[23]);
+	and(WAND23[10], Multiplicand[10], Multiplier[23]);
+	and(WAND23[11], Multiplicand[11], Multiplier[23]);
+	and(WAND23[12], Multiplicand[12], Multiplier[23]);
+	and(WAND23[13], Multiplicand[13], Multiplier[23]);
+	and(WAND23[14], Multiplicand[14], Multiplier[23]);
+	and(WAND23[15], Multiplicand[15], Multiplier[23]);
+	and(WAND23[16], Multiplicand[16], Multiplier[23]);
+	and(WAND23[17], Multiplicand[17], Multiplier[23]);
+	and(WAND23[18], Multiplicand[18], Multiplier[23]);
+	and(WAND23[19], Multiplicand[19], Multiplier[23]);
+	and(WAND23[20], Multiplicand[20], Multiplier[23]);
+	and(WAND23[21], Multiplicand[21], Multiplier[23]);
+	and(WAND23[22], Multiplicand[22], Multiplier[23]);
 	and(WAND23[23], Multiplicand[23], Multiplier[23]);
 
 	
