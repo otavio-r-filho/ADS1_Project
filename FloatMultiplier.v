@@ -18,8 +18,8 @@ module FloatMultiplier(Multiplicand, Multiplier, Result);
     // mantissa multiplication:
 	FSA_24bit_u Mult( .Multiplicand({1'b1,Multiplicand[22:0]}), .Multiplier({1'b1,Multiplier[22:0]}), .Result(Wmult));
 	Mux m2to1( .sel(Wmult[47]), .in0(Wmult[45:22]), .in1(Wmult[46:23]), .out(Wmux));
-	or o1(Result[0],Wmux[1],Wmux[0]);
-	assign Result[22:1] = Wmux[23:2];
+	//or o1(Result[0],Wmux[1],Wmux[0]);
+	assign Result[22:0] = Wmux[23:1];
 	
 	// exponent addition:
 	KoggeStoneAdder8bit Add1( .A(Multiplicand[30:23]), .B(8'b10000001), .Ci(1'b0), .S(WE1), .Co());
