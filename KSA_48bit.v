@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module KSA_24bit(Ci, A, B, S, Co);
+module KSA_48bit(Ci, A, B, S, Co);
 	input Ci;						//Carry in
 	input [47:0] A, B;			//Números a serem somados
 	output wire [47:0] S;		//Soma
