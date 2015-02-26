@@ -5,8 +5,7 @@ module FloatMultiplier(Multiplicand, Multiplier, Result);
 	input wire [31:0] Multiplicand;
 	input wire [31:0] Multiplier;
 	
-	output reg [31:0] Result;
-	
+	output wire [31:0] Result;
 	
 	wire [47:0] Wmult;
 	wire [23:0] Wmux;
@@ -17,7 +16,7 @@ module FloatMultiplier(Multiplicand, Multiplier, Result);
 	
 
     // mantissa multiplication:
-	FSA_24bit_u Mult( .Multiplicand({1'b1,Multiplicand[22:0]}), .Multiplier({1'b1,Multiplier[22:0]}), .Result(Wmult), .Co());
+	FSA_24bit_u Mult( .Multiplicand({1'b1,Multiplicand[22:0]}), .Multiplier({1'b1,Multiplier[22:0]}), .Result(Wmult));
 	Mux m2to1( .sel(Wmult[47]), .in0(Wmult[45:22]), .in1(Wmult[46:23]), .out(Wmux));
 	or o1(Result[0],Wmux[1],Wmux[0]);
 	assign Result[22:1] = Wmux[23:2];

@@ -20,12 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 module FSA_24bit(Multiplicand, Multiplier, Result);
 	
-	input wire clk, rst;
 	input wire [23:0] Multiplicand;
 	input wire [23:0] Multiplier;
 	
-	output reg [47:0] Result;
-	output reg Co;
+	output wire [47:0] Result;
 	
 	wire [47:0] W0,	 W1,  W2,  W3,  W4,  W5,  W6,  W7,  W8,  W9,  W10, W11;
 	wire [47:0] W12, W13, W14, W15, W16, W17, W18, W19, W20, W21, W22, W23;
@@ -663,7 +661,7 @@ module FSA_24bit(Multiplicand, Multiplier, Result);
 	KSA_48bit KSA21 (.Ci(1'b0), .A(W18),   .B(W19),   .S(W21),   .Co());
 	KSA_48bit KSA22 (.Ci(1'b0), .A(W20),   .B(W21),   .S(W22),   .Co());
 	KSA_48bit KSA23 (.Ci(1'b0), .A({1'b0, ~Multiplier[23], 22'b0, Multiplier[23], 23'b0}),   .B({1'b1, ~Multiplicand[23], 22'b0, Multiplicand[23], 23'b0}),   .S(W23),   .Co());
-	KSA_48bit KSA24 (.Ci(1'b0), .A(W22),   .B(W23),   .S(Result),   .Co(Co));
+	KSA_48bit KSA24 (.Ci(1'b0), .A(W22),   .B(W23),   .S(Result),   .Co());
 
 //////////////////////////////////////////////////////////////////////////
 

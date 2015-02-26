@@ -8,19 +8,19 @@ USE ieee.MATH_REAL.ALL;
 
 
 
-ENTITY testbench IS
-END testbench;
+ENTITY FloatMultiplier_tb IS
+END FloatMultiplier_tb;
 
 
 
-ARCHITECTURE behavior OF testbench IS 
+ARCHITECTURE behavior OF FloatMultiplier_tb IS 
  
     -- Component dec_Multiplicandlaration for the Unit Under Test (UUT)
  
     COMPONENT FloatMultiplier
 	 Port ( 
-	       Multiplicand	: IN std_logic_vector(31 downto 0),
-		   Multiplier	: IN std_logic_vector(31 downto 0),
+	       Multiplicand	: IN std_logic_vector(31 downto 0);
+		   Multiplier	: IN std_logic_vector(31 downto 0);
 		   Result		: OUT std_logic_vector(31 downto 0)
  		);
     END COMPONENT;    
@@ -35,6 +35,8 @@ ARCHITECTURE behavior OF testbench IS
 
 	END exponent;
 	
+	-- Clock signal
+	signal clk : std_logic;
 	
    --Inputs   
 	 signal Multiplicand	: std_logic_vector(31 downto 0);
@@ -80,9 +82,9 @@ BEGIN
    -- Clock process definitions
    clk_process :process
    begin
-		CLK <= '0';
+		clk <= '0';
 		wait for clk_period/2;
-		CLK <= '1';
+		clk <= '1';
 		wait for clk_period/2;
    end process;
  
