@@ -9,7 +9,7 @@ module Circle_Area_Calculator(clk, rst, radius, area);
   parameter Pi = 32'b01000000010010010000111111010000;
   
   FloatMultiplier FM0(.Multiplicand(radius), .Multiplier(radius), .Result(Square_radius));
-  FloatMultiplier FM1(.Multiplicand(Square_radius), Multiplier(Pi), .Result(Result));
+  FloatMultiplier FM1(.Multiplicand(Square_radius), .Multiplier(Pi), .Result(Result));
   
   always @(posedge clk) begin
 	if(rst) begin
