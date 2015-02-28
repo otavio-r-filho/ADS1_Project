@@ -646,7 +646,7 @@ module FSA_24bit_u(Multiplicand, Multiplier, Result);
 	KSA_48bit KSA6  (.Ci(1'b0), .A({12'b0, WAND12, 12'b0}), .B({11'b0, WAND13, 13'b0}), .S(W6),  .Co());
 	KSA_48bit KSA7  (.Ci(1'b0), .A({10'b0, WAND14, 14'b0}), .B({9'b0, WAND15, 15'b0}),  .S(W7),  .Co());
 	KSA_48bit KSA8  (.Ci(1'b0), .A({8'b0, WAND16, 16'b0}),  .B({7'b0, WAND17, 17'b0}),  .S(W8),  .Co());
-	KSA_48bit KSA9  (.Ci(1'b0), .A({6'b0, WAND18, 18'b0}),  .B({5'b0, WAND19, 19'b0}),  .S(W9),  .Co());
+	KSA_48bit KSA9  (.Ci(1'b0), .A({6'b0, WAND17, 18'b0}),  .B({5'b0, WAND19, 19'b0}),  .S(W9),  .Co());
 	KSA_48bit KSA10 (.Ci(1'b0), .A({4'b0, WAND20, 20'b0}),  .B({3'b0, WAND21, 21'b0}),  .S(W10), .Co());
 	KSA_48bit KSA11 (.Ci(1'b0), .A({2'b0, WAND22, 22'b0}),  .B({1'b0, WAND23, 23'b0}),  .S(W11), .Co());
 	KSA_48bit KSA12 (.Ci(1'b0), .A(W0),    .B(W1),    .S(W12),   .Co());
