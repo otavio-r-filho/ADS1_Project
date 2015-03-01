@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module FloatMultiplier(Multiplicand, Multiplier, Result);
+module FloatMultiplier_rounding(Multiplicand, Multiplier, Result);
 	
 	
 	input wire [31:0] Multiplicand;

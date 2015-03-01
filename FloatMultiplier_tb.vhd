@@ -17,7 +17,7 @@ ARCHITECTURE behavior OF FloatMultiplier_tb IS
  
     -- Component dec_Multiplicandlaration for the Unit Under Test (UUT)
  
-    COMPONENT FloatMultiplier
+    COMPONENT FloatMultiplier_rounding
 	 Port ( 
 	       Multiplicand	: IN std_logic_vector(31 downto 0);
 		   Multiplier	: IN std_logic_vector(31 downto 0);
@@ -72,7 +72,7 @@ ARCHITECTURE behavior OF FloatMultiplier_tb IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-    uut: FloatMultiplier 
+    uut: FloatMultiplier_rounding 
 		PORT MAP (
 			Multiplicand	=> Multiplicand, 
 			Multiplier 		=> Multiplier,

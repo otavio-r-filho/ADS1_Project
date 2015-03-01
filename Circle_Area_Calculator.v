@@ -8,8 +8,8 @@ module Circle_Area_Calculator(clk, rst, radius, area);
   //IEEE 754 float point representation of 3,14159 = Pi.
   parameter Pi = 32'b01000000010010010000111111010000;
   
-  FloatMultiplier FM0(.Multiplicand(radius), .Multiplier(radius), .Result(Square_radius));
-  FloatMultiplier FM1(.Multiplicand(Square_radius), .Multiplier(Pi), .Result(Result));
+  FloatMultiplier_rounding FM0(.Multiplicand(radius), .Multiplier(radius), .Result(Square_radius));
+  FloatMultiplier_rounding FM1(.Multiplicand(Square_radius), .Multiplier(Pi), .Result(Result));
   
   always @(posedge clk) begin
 	if(rst) begin
